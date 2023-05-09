@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css"/>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div class="disheader">
+            <h1 class="disheader-h1"> Zomato Food Delivery Process Logic </h1>
+            <!-- You can also use marquee tag for animation from top/ down/ left-right/ right-left 
+                and you can set acrollamount from 1(slow) to any number i.e. for e.g. 100(fast) and so on; 
+                But this tag has been deprecated in the new version of HTML, i.e., HTML 5.
+
+                <marquee width="100%" direction="left" height="50px" scrollamount="15">
+                    Zomato
+                </marquee> 
+            -->
+        </div>
+        <div class="header">
+            <h2 id="currentStatus"> Waiting for Restaurant Acceptance </h2>
+            <div class="statuses">
+                <p class="time" id="status1"> On Time 😊</p>
+                <p class="time" id="status2"> Arriving in 15 mins </p>
+            </div>
+            <div class="mapview">
+                <img id="mapview" src="mapimage.png"/>
+            </div>
+            <div class="driver-details">
+                <img class="driver-photo" src="delagentlogo.png"/>
+                <div class="driver-status none" id="found-driver">
+                    <p class="driver-into">Hello, I'm Suresh your valet</p>
+                    <p class="driver-msg">I can speak english and hindi</p>
+                </div>
+                <div class="driver-status" id="finding-driver">
+                    <p class="driver-into"> We are searching for nearby valet </p>
+                </div>
+                <img class="call none" id="call" src="https://cdn-icons-png.flaticon.com/512/5070/5070407.png" alt="">
+            </div>
+            
+                <button id="findValet"> Lets Find Valet </button>
+                <button id="acceptOrder"> Ask for Restaurant Order </button>
+                <button id="deliverOrder"> Deliver Order </button>    
+            
+        </div>
+    </body>
+</html>

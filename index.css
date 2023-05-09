@@ -1,0 +1,135 @@
+/*   * means "all elements" (a universal selector), so we are setting all elements to have zero margins, and zero padding, 
+     thus making them look the same in all browsers. */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;     /*include the padding and border in an element's total width and height*/
+}
+
+.disheader{
+    background-color: red;
+}
+
+.disheader-h1{
+    background-color: red;
+    color: white;
+    padding: 8px;
+    font-size: 18px;
+    white-space: nowrap;      /* Text will never wrap to the next line */
+    overflow: hidden;         /* The overflow is clipped, and the rest of the content will be invisible */
+ /* animation properties */
+ -moz-transform: translateX(100%);
+ -webkit-transform: translateX(100%);
+ transform: translateX(100%);
+ animation: my-animation 15s linear infinite;   /*animation-name animation-duration animation-timing animation-uteration-count*/
+}
+ /* for Firefox */
+@keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+   }    
+
+
+
+.header{
+    background-color: green;
+}
+
+#currentstatus{
+    color: white;
+    padding: 24px 0px 8px;
+    text-align: center;
+}
+
+.statuses{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.time{
+    background-color: rgb(35, 179, 66);
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 15px;
+    border-radius: 4px;
+    margin: 10PX;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.75);
+}
+
+#status2{
+    animation: blinking 2s linear infinite;
+}
+
+@keyframes blinking {
+    0% {opacity: 1.0;}
+    50% { opacity: 0.0;}
+    100% {opacity: 1.0;}
+}
+
+.mapview{
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    background-color: grey;
+}
+
+.mapview img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.driver-details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    background-color: white;
+}
+
+.driver-photo,
+.call{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    object-fit: cover;    
+}
+
+.call{
+    height: 32px;
+    width: 32px;
+}
+
+.driver-status{
+    padding: 16px;
+    flex:1;
+}
+
+.driver-into{
+    font-size: 18px;
+    font-weight: 600;
+}
+.driver-msg{
+    padding-top:2px;
+    font-size: 14px;
+}
+.none{              /* this class is used to hide the respective content*/
+    display: none;
+}
+button{
+    padding: 8px;
+    margin: 0 10px;
+}
